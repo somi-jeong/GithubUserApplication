@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import com.example.githubuserapplication.R
 import com.example.githubuserapplication.databinding.FragmentFollowBinding
 
-class FollowingFragment:Fragment(R.layout.fragment_follow) {
+class FollowingFragment : Fragment(R.layout.fragment_follow) {
 
-    private var _binding:FragmentFollowBinding? = null
+    private var _binding: FragmentFollowBinding? = null
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

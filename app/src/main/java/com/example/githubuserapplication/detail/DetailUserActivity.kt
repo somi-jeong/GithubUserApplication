@@ -1,20 +1,19 @@
 package com.example.githubuserapplication.detail
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.example.githubuserapplication.R
 import com.example.githubuserapplication.databinding.ActivityDetailUserBinding
 
 class DetailUserActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         const val EXTRA_USERNAME = "extra_username"
     }
 
-    private lateinit var binding:ActivityDetailUserBinding
+    private lateinit var binding: ActivityDetailUserBinding
     private lateinit var viewModel: DetailUserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +23,10 @@ class DetailUserActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra(EXTRA_USERNAME)
 
-        viewModel = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(DetailUserViewModel::class.java)
+        viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        ).get(DetailUserViewModel::class.java)
 
         viewModel.setUserDetail(username!!)
         viewModel.getUserDetail().observe(this) {
@@ -41,7 +43,7 @@ class DetailUserActivity : AppCompatActivity() {
                 }
             }
         }
-        val sectionPagerAdapter = SectionPagerAdapter(this,supportFragmentManager)
+        val sectionPagerAdapter = SectionPagerAdapter(this, supportFragmentManager)
         binding.apply {
             viewPager.adapter = sectionPagerAdapter
             tabs.setupWithViewPager(viewPager)

@@ -31,7 +31,8 @@ class DetailUserViewModel : ViewModel() {
                 }
             })
     }
-    fun getUserDetail():LiveData<DetailUserResponse>{
+
+    fun getUserDetail(): LiveData<DetailUserResponse> {
         return user
     }
 }

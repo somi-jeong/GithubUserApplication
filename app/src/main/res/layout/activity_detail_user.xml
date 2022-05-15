@@ -52,10 +52,10 @@
             android:id="@+id/tv_followers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:gravity="center_vertical"
-            android:layout_marginEnd="16dp"
             app:drawableStartCompat="@drawable/ic_people"
             tools:text="1 Followers" />
 
@@ -63,9 +63,9 @@
             android:id="@+id/tv_following"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:textColor="@color/black"
             android:textSize="14dp"
-            android:layout_gravity="center_vertical"
             app:drawableStartCompat="@drawable/ic_people"
             tools:text="1 Following" />
 
@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:tabTextColor="@color/black"/>
+        app:tabTextColor="@color/black" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
@@ -91,7 +91,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabs" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
